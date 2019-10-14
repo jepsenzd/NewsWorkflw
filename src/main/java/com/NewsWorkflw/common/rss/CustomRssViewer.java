@@ -1,6 +1,8 @@
 package com.NewsWorkflw.common.rss;
 
 import java.util.ArrayList;
+
+
 import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
@@ -27,6 +29,8 @@ public class CustomRssViewer extends AbstractRssFeedView {
 	
 	
 	@Override
+    //small idea but maybe changed Items to Articles since that what's its over??
+	List<Article> articles = new ArrayList<Article>(listContent.size()); 
 	protected List<Item> buildFeedItems(Map<String, Object> model,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {

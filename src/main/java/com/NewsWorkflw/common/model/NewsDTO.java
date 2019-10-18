@@ -2,7 +2,7 @@ package com.NewsWorkflw.common.model;
 
 import java.util.Date;
 
-public class SampleContent {
+public class NewsDTO {
 
 	String title;
 	String url;

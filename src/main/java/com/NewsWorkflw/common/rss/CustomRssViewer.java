@@ -35,6 +35,8 @@ public class CustomRssViewer extends AbstractRssFeedView {
 		List<SampleContent> listContent = (List<SampleContent>) model.get("feedContent");
 		List<Item> items = new ArrayList<Item>(listContent.size());
 		
+		// The use of an array for this set of data is very helpful in visualizing what you're trying to do.  I wasn't able to run it successfully but I can sort of get it
+		
 		for(SampleContent tempContent : listContent ){
 		
 			Item item = new Item();

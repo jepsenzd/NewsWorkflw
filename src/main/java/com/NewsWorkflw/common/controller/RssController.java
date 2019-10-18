@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+//		is this a spring boot project? I cannot seem to run it and the springframework is one of the issues.
+
 import com.NewsWorkflw.common.model.SampleContent;
 
 @Controller
@@ -39,6 +41,8 @@ public class RssController {
 		ModelAndView modelview = new ModelAndView();
 		modelview.setViewName("rssViewer");
 		modelview.addObject("feedContent"), items);
+		
+		//renamed mav to modelview, makes it more explainable
 		
 		
 		

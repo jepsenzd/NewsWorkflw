@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.view.feed.AbstractRssFeedView;
 
-import com.NewsWorkflw.common.model.SampleContent;
+import com.NewsWorkflw.common.model.NewsDTO;
 import com.sun.syndication.feed.rss.Channel;
 import com.sun.syndication.feed.rss.Content;
 import com.sun.syndication.feed.rss.Item;
@@ -32,10 +32,10 @@ public class CustomRssViewer extends AbstractRssFeedView {
 			throws Exception {
 		
 		@SuppressWarnings("unchecked")
-		List<SampleContent> listContent = (List<SampleContent>) model.get("feedContent");
+		List<NewsDTO> listContent = (List<NewsDTO>) model.get("feedContent");
 		List<Item> items = new ArrayList<Item>(listContent.size());
 		
-		for(SampleContent tempContent : listContent ){
+		for(NewsDTO tempContent : listContent ){
 		
 			Item item = new Item();
 			

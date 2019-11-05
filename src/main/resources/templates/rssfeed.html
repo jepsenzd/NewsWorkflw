@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>RSS Feed</title>
+</head>
+<body>
+<p th:text="${feedContent}"/>
+<ol>
+        <li th:each="items : ${feedContent}" th:text="${items}"></li>
+</ol>
+
+
+<br>
+
+</body>
+</html>

@@ -12,6 +12,6 @@
 	<!-- Map returned view name "rssViewer" to bean id "rssViewer" -->
 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
 
-	<bean id="rssViewer" class="com.NewsWorkflw.common.rss.CustomRssViewer" />
+	<bean id="rssfeed" class="com.NewsWorkflw.common.rss.CustomRssViewer" />
 
 </beans>

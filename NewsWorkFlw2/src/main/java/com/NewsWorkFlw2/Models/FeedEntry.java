@@ -4,10 +4,13 @@ package com.NewsWorkFlw2.Models;
 	import java.util.Date;
 
 	public class FeedEntry {
-
+//over all this project looks great and it's difficult to make any edits
+//something simple like changing the string names to match a newspaper like site
 	    String title;
 	    String link;
+	    //String story/article
 	    String content;
+	    //String publishDate
 	    Date date;
 
 	    public String getTitle() {

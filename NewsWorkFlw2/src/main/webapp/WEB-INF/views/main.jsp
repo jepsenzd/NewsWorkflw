@@ -7,6 +7,6 @@
 <title>RSS Feed Main Page</title>
 </head>
 <body>
-<a href=/rssFeed>RSS Feed test page</a>
+<a href="/rssFeed">RSS Feed test page</a>
 </body>
 </html>

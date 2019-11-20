@@ -14,6 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 	public class MyWebConfig {
 	  @Bean
 	  //had to call this myBeanName because beanNameViewResolver is listed somewhere else. 
+	  //I wasn't able to find the location for the BeanNameViewResolver listed somewhere else, is the my neccessary?
 	  public ViewResolver myBeanNameViewResolver() {
 	      BeanNameViewResolver resolver = new BeanNameViewResolver();
 	      return resolver;

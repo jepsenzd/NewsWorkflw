@@ -25,6 +25,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 	      InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 	      viewResolver.setPrefix("/WEB-INF/views/");
 	      viewResolver.setSuffix(".jsp");
+	      
+	      //really like the set prefix and suffix you have for the view resolver, good way to name jsp's
 	      return viewResolver;
 	  }
 	}

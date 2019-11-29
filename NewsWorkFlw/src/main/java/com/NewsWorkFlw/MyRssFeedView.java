@@ -48,6 +48,7 @@ public class MyRssFeedView extends AbstractRssFeedView {
             Content content = new Content();
             content.setValue(feedEntry.getContent());
             item.setContent(content);
+            
 
             items.add(item);
         }

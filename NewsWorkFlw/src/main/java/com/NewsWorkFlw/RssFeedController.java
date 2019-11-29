@@ -23,25 +23,22 @@ public class RssFeedController {
         return "main";
     }
 
-    @RequestMapping(value = "/rssFeed", params = "action", method = RequestMethod.GET)
-    @ResponseBody
-    public String handleForexRequest(Model model, @RequestParam("action") String action) {
-  	  if(action.equals("company")) {
+    @RequestMapping(value = "/rssFeed", method = RequestMethod.GET, params = {"action=company"})
+    public String companyFeed(Model model) {
         model.addAttribute("feedInfo", getFeedCompanyInfo());
         return "rssFeedView";
-        }
-  	  if(action.equals("events")) {
-  		  model.addAttribute("feedInfo", getFeedEventInfo());
-  	      return "rssFeedView";
-  	  }
-  	  if(action.equals("career")) {
-  		  model.addAttribute("feedInfo", getFeedCareerInfo());
-  	      return "rssFeedView";
-  	  }
-  	  else {
-  		  return "main";
-  	  }
     }
+    @RequestMapping(value = "/rssFeed", method = RequestMethod.GET, params = {"action=event"})
+    public String eventFeed(Model model) {
+        model.addAttribute("feedInfo", getFeedEventInfo());
+        return "rssFeedView";
+    }
+    @RequestMapping(value = "/rssFeed", method = RequestMethod.GET, params = {"action=career"})
+    public String careerFeed(Model model) {
+        model.addAttribute("feedInfo", getFeedCareerInfo());
+        return "rssFeedView";
+    }
+
 
     private static FeedInfo getFeedCompanyInfo() {
         //to-do: move it to service layer

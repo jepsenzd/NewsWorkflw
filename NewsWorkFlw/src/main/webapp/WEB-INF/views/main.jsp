@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/main.css">
 <meta charset="ISO-8859-1">
 <title>RSS Feed Main Page</title>
+<body style="text-align:center">
 <div class="main">
 <header>
 <h1>NewsWorkFlw</h1>

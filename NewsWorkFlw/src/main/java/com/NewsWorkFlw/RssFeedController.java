@@ -28,7 +28,7 @@ public class RssFeedController {
         model.addAttribute("feedInfo", getFeedCompanyInfo());
         return "rssFeedView";
     }
-    @RequestMapping(value = "/rssFeed", method = RequestMethod.GET, params = {"action=event"})
+    @RequestMapping(value = "/rssFeed", method = RequestMethod.GET, params = {"action=events"})
     public String eventFeed(Model model) {
         model.addAttribute("feedInfo", getFeedEventInfo());
         return "rssFeedView";

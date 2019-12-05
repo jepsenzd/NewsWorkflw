@@ -12,7 +12,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @ComponentScan
 public class MyWebConfig {
-    @Bean
+    
+	@Bean
     public ViewResolver beanNameViewResolver() {
         BeanNameViewResolver resolver = new BeanNameViewResolver();
         return resolver;

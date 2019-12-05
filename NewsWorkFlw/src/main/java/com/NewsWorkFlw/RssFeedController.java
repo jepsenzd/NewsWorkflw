@@ -28,17 +28,18 @@ public class RssFeedController {
         model.addAttribute("feedInfo", getFeedCompanyInfo());
         return "rssFeedView";
     }
+    
     @RequestMapping(value = "/rssFeed", method = RequestMethod.GET, params = {"action=events"})
     public String eventFeed(Model model) {
         model.addAttribute("feedInfo", getFeedEventInfo());
         return "rssFeedView";
     }
+    
     @RequestMapping(value = "/rssFeed", method = RequestMethod.GET, params = {"action=career"})
     public String careerFeed(Model model) {
         model.addAttribute("feedInfo", getFeedCareerInfo());
         return "rssFeedView";
     }
-
 
     private static FeedInfo getFeedCompanyInfo() {
         //to-do: move it to service layer
@@ -57,6 +58,7 @@ public class RssFeedController {
         feedInfo.setFeedEntries(list);
         return feedInfo;
     }
+    
     private static FeedInfo getFeedCareerInfo() {
         //to-do: move it to service layer
         FeedInfo feedInfo = new FeedInfo();
@@ -74,6 +76,7 @@ public class RssFeedController {
         feedInfo.setFeedEntries(list);
         return feedInfo;
     }
+    
     private static FeedInfo getFeedEventInfo() {
         //to-do: move it to service layer
         FeedInfo feedInfo = new FeedInfo();
@@ -92,6 +95,14 @@ public class RssFeedController {
         return feedInfo;
     }
 
+    /**
+     * 
+     * @param title
+     * @param uri
+     * @param content
+     * @param date
+     * @return fe (feed entry containing (title, link, content, and date))
+     */
     private static FeedEntry createFeedEntry(String title, String uri,
                                              String content, Date date) {
         FeedEntry fe = new FeedEntry();

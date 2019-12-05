@@ -30,6 +30,10 @@ public class MyRssFeedView extends AbstractRssFeedView {
         feedChannel.setDescription(feedInfo.getDesc());
     }
 
+    /**
+     * Adds a feed item to the list
+     * @param model
+     */
     @Override
     protected List<Item> buildFeedItems(Map<String, Object> model,
                                         HttpServletRequest httpServletRequest,
